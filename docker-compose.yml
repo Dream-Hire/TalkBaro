@@ -104,6 +104,7 @@ services:
       - /etc/letsencrypt/live/talkbaro.duckdns.org/privkey.pem:/etc/ssl/private/privkey.pem:ro
     depends_on:
       - frontend
+      - backend
     networks:
       - talkbaro-network
 
