@@ -63,7 +63,7 @@ services:
   
   backend:
     build:
-      context: ./backend
+      context: ./backend/talkbaro
       dockerfile: Dockerfile
     container_name: backend-container
     restart: always
