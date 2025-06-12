@@ -6,7 +6,7 @@ WORKDIR /build
 COPY package*.json ./
 
 # 의존성 설치
-RUN npm ci --only=production --silent
+RUN npm ci --silent
 
 # 소스 코드 복사
 COPY . .
