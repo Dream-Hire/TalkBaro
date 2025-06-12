@@ -16,10 +16,10 @@ RUN npm run build
 
 # 실행 스테이지 - 정적 파일만 준비
 FROM nginx:stable-alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /build/dist /usr/share/nginx/html
 
 # Nginx 설정 덮어쓰기
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # 포트 노출 (내부적으로만 사용)
 EXPOSE 80
