@@ -86,7 +86,7 @@ services:
     container_name: frontend-container
     restart: always
     volumes:
-      - frontend_dist:/app/dist
+      - frontend_dist:/build/dist
     networks:
       - talkbaro-network
 
@@ -109,13 +109,9 @@ services:
 
 volumes:
   mysql_data:
-    external: true
   mongodb_data:
-    external: true
   kafka_data:
-    external: true
   zookeeper_data:
-    external: true
   frontend_dist:
 
 networks:
