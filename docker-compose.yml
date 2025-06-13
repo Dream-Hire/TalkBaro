@@ -68,10 +68,9 @@ services:
     container_name: backend-container
     restart: always
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
       - DB_HOST=mysql-container
       - MONGO_HOST=mongodb-container
-      - KAFKA_HOST=kafka:9092
+      - KAFKA_HOST=kafka
     depends_on:
       - mysql
       - mongodb
@@ -117,4 +116,5 @@ volumes:
 
 networks:
   talkbaro-network:
+    name: talkbaro-network
     driver: bridge
